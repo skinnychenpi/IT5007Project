@@ -6,6 +6,7 @@ import './assets/css/flex-slider.css';
 import './assets/css/fontawesome.css';
 import './assets/css/tooplate-main.css';
 import reportWebVitals from './reportWebVitals';
+import fetch from 'node-fetch';
 
 // import OwlCarousel from 'react-owl-carousel';
 // import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -264,6 +265,7 @@ function Index() {
       </React.Fragment>
   );
 }
+
 
 ReactDOM.render(
   <React.StrictMode>

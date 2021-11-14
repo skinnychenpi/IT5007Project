@@ -1,0 +1,68 @@
+scalar GraphQLDate
+
+type ResellLinks {
+  stockX: String
+  goat: String
+  flightClub: String
+}
+
+type LowestResellPrice {
+  stockX: Int
+  goat: Int
+  flightClub: Int
+}
+
+type PriceMap {
+  sizes: [String!]
+  prices: [Int!]
+}
+
+type ResellPrices {
+  stockX: PriceMap
+  goat: PriceMap
+  flightClub: PriceMap
+}
+
+type SneakerDetail {
+    shoeName: String!
+    brand: String!
+    silhoutte: String!
+    styleID: String!
+    retailPrice: String!
+    releaseDate: String!
+    description: String!
+    imageLinks: [String!]
+    thumbnail: String!
+    urlKey: String!
+    make: String!
+    colorway: String!
+    resellLinks: ResellLinks
+    lowestResellPrice: LowestResellPrice
+    resellPrices: ResellPrices
+}
+
+type SneakerSketch {
+  shoeName: String!
+  brand: String!
+  silhoutte: String!
+  styleID: String!
+  make: String!
+  colorway: String!
+  retailPrice: Int!
+  thumbnail: String!
+  releaseDate: String!
+  description: String!
+  urlKey: String!
+}
+
+##### Top level(Query and Mutation) declarations:
+type Query {
+  about: String!
+  searchProduct(message: String!, count: Int!): [SneakerSketch]
+  getProductDetail(styleID: String!, urlKey: String!): SneakerDetail
+  getMostPopular(count: Int!): [SneakerSketch]
+}
+
+type Mutation {
+  setAboutMessage(message: String!): String 
+}
