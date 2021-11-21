@@ -65,19 +65,6 @@ function setAboutMessage(_, { message }) {
 }
 
 
-// function objToDictOnSearch(obj) {
-//   var keys = Object.keys(obj);
-//   var dict = {};
-//   for (var i = 0; i < keys.length; i++) {
-//       var key = keys[i];
-//       if (key == "imageLinks" || key == "resellLinks" || key == "size" || key == "lowestResellPrice" || key == "resellPrices") {
-//         continue;
-//       }
-//       dict[key] = obj[key];
-//   }
-//   return dict;
-// }
-
 async function searchProduct(_, {message, count}) {
   return await shopAllAPI.searchProduct(message, count);
 }
@@ -91,70 +78,6 @@ async function getMostPopular(_, {count}) {
   return await shopAllAPI.getMostPopular(count);
 }
 
-// async function guestList() {
-//   const guests = await collection.find({}).toArray();
-//   guestNum = guests.length;
-//   return guests;
-// }
-
-// function freeSeats() {
-//   return limit - guestNum;
-// }
-
-// function isNumber(value) {
-//     var patrn = /^[0-9]*$/;
-//     if (patrn.exec(value) == null || value == "") {
-//         return false;
-//    } else {
-//         return true;
-//    }
-// }
-
-// function guestAddValidate(guest) {
-//   const errors = [];
-//   if (guest.name.length == 0) {
-//     errors.push('Name of the guest can not be empty.');
-//   }
-//   if (!isNumber(guest.phNum)) {
-//     errors.push('Phone number of the guest is not valid.');
-//   }
-//   if (guestNum == limit) {
-//     errors.push('The waiting list is already full.');
-//   }
-//   if (errors.length > 0) {
-//     throw new UserInputError('Invalid input(s)', { errors });
-//   }
-// }
-
-// function guestDeleteValidate(size) {
-//   const errors = [];
-//   if (size == 0) {
-//     errors.push('The waiting list is empty.');
-//   }
-//   if (errors.length > 0) {
-//     throw new UserInputError('Invalid input(s)', { errors });
-//   }
-// }
-
-// async function guestAdd(_, { guest }) {
-//   guestAddValidate(guest);
-//   guest.time = new Date();
-//   guest.serial = guestNum + 1;
-//   const result = await collection.insertOne(guest);
-//   const savedGuest = await collection.findOne({ _id: result.insertedId });
-//   return savedGuest;
-// }
-
-// async function guestDelete() {
-//     guestDeleteValidate(guestNum);
-//     const Deletedguest = await collection.findOne({serial: 1});
-//     result = await collection.deleteOne({serial: 1});
-//     console.log('Result of delete:\n', result.result);
-    
-//     result = await collection.updateMany({}, {$inc : {serial: -1}});
-//     console.log('Result of decrementing serial:\n', result.result);
-//     return Deletedguest;
-// }
 
 const server = new ApolloServer({
   typeDefs: fs.readFileSync('./schema.graphql', 'utf-8'),
@@ -178,8 +101,8 @@ async function main() {
 
   server.applyMiddleware({ app, path: '/graphql' });
 
-  app.listen(3000, function () {
-    console.log('\n--- Express server started on port 3000 ---');
+  app.listen(5000, function () {
+    console.log('\n--- Express server started on port 5000 ---');
   });
 
 }
