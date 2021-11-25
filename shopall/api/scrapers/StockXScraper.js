@@ -28,17 +28,18 @@ async function getProductsAndInfo(key, count) {
                 continue;
             }
             var shoe = new Sneaker();
+            shoe.urlKey = json.hits[i].url,
+            shoe.styleID =  json.hits[i].style_id,
             shoe.shoeName =  json.hits[i].name,
             shoe.brand =  json.hits[i].brand,
             shoe.silhoutte =  json.hits[i].make,
-            shoe.styleID =  json.hits[i].style_id,
             shoe.make =  json.hits[i].make,
             shoe.colorway = json.hits[i].colorway,
             shoe.retailPrice = json.hits[i].searchable_traits['Retail Price'],
             shoe.thumbnail = json.hits[i].media.imageUrl,
             shoe.releaseDate = json.hits[i].release_date,
             shoe.description = json.hits[i].description,
-            shoe.urlKey = json.hits[i].url,
+            
             shoe.resellLinks.stockX = 'https://stockx.com/' + json.hits[i].url
 
             if(json.hits[i].lowest_ask){

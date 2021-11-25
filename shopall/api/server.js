@@ -93,7 +93,7 @@ const server = new ApolloServer({
 
 async function main() {
   console.log("\n--- Express Server Starts --- ")
-  await connectToDb();
+  // await connectToDb();
   
   const app = express();
 
