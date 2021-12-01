@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './assets/css/flex-slider.css';
 import './assets/css/fontawesome.css';
 import './assets/css/trans.css';
 import reportWebVitals from './reportWebVitals';
@@ -59,9 +58,6 @@ class Navigation extends React.Component {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/about">About Us</NavLink>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="contact.html">Contact Us</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -91,21 +87,13 @@ class SearchBar extends React.Component {
         <div className= "searchbar">
             <div className="container">
             <div className ="searchbox">
-                {/* <label className="discription"> Enter what you want: </label>
-                <input type="text" class="search_key" value="What you want" />
-                <button className="submit" >Search</button> */}
                 
-                    <div className="searchcontent">
-                    <input type="text" class = "search_key" ref = "search_key"/>
-                    
-
-                    <button  class="searchbutton" onClick = {this.redirectHandler}>search
-                    {/* {this.refs.search_key ? <button  class="searchbutton"><Link to = {`search/${String(this.refs.search_key.value)}`}>Search</Link></button> : 
-                    <button  class="searchbutton">search</button>} */}
-                    </button>
-                    </div>
+                <div className="searchcontent">
+                <input type="text" class = "search_key" ref = "search_key"/>
                 
-                        
+                <button  class="searchbutton" onClick = {this.redirectHandler}>search
+                </button>
+                </div>  
                 
             </div>
             </div>
@@ -129,12 +117,12 @@ class Banner extends React.Component {
           <div className="row">
             <div className="col-md-12">
               <div className="caption">
-                <h2>This is a Demo</h2>
+                <h2>Welcome to SHOPALL X Sneakers!</h2>
                 <div className="line-dec" />
-                <p>This is our website Demo. Credit to Tooplate to provide sufficient template resources! Currently only <strong>index page</strong> included. In the future detailed product page and backend will be developed. 
+                <p>This is our website Demo. Credit to Tooplate to provide sufficient template resources! Currently only <strong>search and price comparison</strong> included. In the future more functions will be developed. 
                   <br /><br /></p>
                 <div className="main-button">
-                  <a href="#">Sign up Now!</a>
+                  <a href="#">Experience Now!</a>
                 </div>
               </div>
             </div>
@@ -176,7 +164,6 @@ class FeaturedItems extends React.Component {
 
   render(){
     const entries= this.props.data.map(entry => <SingleItem entry={entry} />)
-    // const entry = this.props.data;
     return(
       <div className="featured-items">
         <div className="container">
@@ -190,9 +177,6 @@ class FeaturedItems extends React.Component {
             <div>
                 <a href="single-product.html">
                   <div className="single-featured-item">
-                    {/* <img src = {entry[0].thumbnail} alt="Item 1" />
-                    <h4>{entry[0].shoeName}</h4>
-                    <h6>{"$"+entry[0].retailPrice}</h6> */}
                     {entries}
                   </div>
                 </a>

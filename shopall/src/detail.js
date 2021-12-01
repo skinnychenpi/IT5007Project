@@ -6,7 +6,6 @@ import './assets/css/tooplate-main.css';
 import './assets/css/searchpage.css';
 import reportWebVitals from './reportWebVitals';
 import {Link, Redirect, withRouter, NavLink} from 'react-router-dom';
-import { useTable, useSortBy } from 'react-table';
 import loading from './loading2.svg';
 
 // Title
@@ -57,9 +56,6 @@ class Preheader extends React.Component {
                 </li>
                 <li className="nav-item">
                 <NavLink className="nav-link" to="/about">About Us</NavLink>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="contact.html">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -146,7 +142,7 @@ class SizeTableUnit extends React.Component {
     render() {
         const price = this.props.data;
         return (
-            <td>{price}</td>
+            <td>${price}</td>
         );
     }
 }
@@ -272,7 +268,9 @@ class Loading extends React.Component {
     render() {
         return (
             <React.Fragment>
+            <div className="load">
             <img src={loading} className="loading" alt="loading" />
+            </div>
             </React.Fragment>
         )
     }

@@ -60,9 +60,6 @@ class Navigation extends React.Component {
               <li className="nav-item">
               <NavLink className="nav-link" to="/about">About Us</NavLink>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="contact.html">Contact Us</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -71,34 +68,6 @@ class Navigation extends React.Component {
   }
 }
 
-// class SearchBar extends React.Component {
-//   render() {
-//     return (
-//       <div className= "searchbar">
-//         <div className="container">
-//           <div className ="searchbox">
-//             {/* <label className="discription"> Enter what you want: </label>
-//             <input type="text" class="search_key" value="What you want" />
-//             <button className="submit" >Search</button> */}
-               
-//                 <div className="searchcontent">
-//                 <input type="text" class = "search_key" />
-                
-
-                
-//                 <button  class="searchbutton">
-//                   Search
-//                 </button>
-//                 </div>
-              
-                       
-            
-//           </div>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
 
 class SearchBar extends React.Component {
     constructor() {

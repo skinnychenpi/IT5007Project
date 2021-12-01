@@ -105,7 +105,7 @@ a {
 }
 .navbar:after {
     width: 100%;
-    height: 1px;
+    
     background-color: #eee;
     content: '';
     position: absolute;
@@ -128,7 +128,7 @@ a {
     line-height: 30px;
     font-family: 'FontAwesome';
 }
-.searchbar {
+/* .searchbar {
     background-position: center center;
     background-color: rgba(245, 247, 247, 0.9);
     border-radius: 5px;
@@ -170,7 +170,7 @@ a {
     letter-spacing: 0.4px;
     text-decoration: none;
     transition: all 0.5s;
-}
+} */
 
 /* Banner Style */
 .banner {
@@ -233,12 +233,20 @@ a {
     font-weight: 700;
     color: #1e1e1e;
     margin-top: 15px;
-    margin-bottom: auto;
+    margin-bottom: 15px;
+    width:90%;
+    height: 20%;
     transition: all 0.5s;
     box-sizing:border-box
 }
 .featured-item:hover h4 {
     color: #3a8bcd;
+    width:90%;
+    height: 20%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: auto;
+    font-weight: 700;
 }
 .featured-item h6 {
     color: #3a8bcd;
@@ -397,6 +405,23 @@ a {
     color: #3a8bcd;
     text-decoration: none;
 }
+
+
+
+.load {
+	width: 100%;
+	box-sizing:border-box;
+    margin-top: 200px ;
+    text-align: center;
+}
+.load img{
+    display: flex;align-items: center;
+	box-sizing:border-box;
+    display: table-cell;
+    margin:0 auto
+    
+}
+
 
 /* Featured Page Style */
 .featured-page {
@@ -614,6 +639,28 @@ a {
 }
 
 
+  
+.WLtable table {
+    margin: 0 auto;
+}
+
+
+.WLtable table td,th{
+    border-collapse: collapse;
+    
+   
+    text-align: center;
+    border: 1px solid rgb(130, 139, 143);
+}
+
+
+
+
+
+
+
+
+
 
 /* About Us Style */
 .about-page {
@@ -621,13 +668,25 @@ a {
     margin-bottom: 80px;
 }
 .about-page .right-content h4 {
-    font-size: 17px;
+    font-size: 24px;
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 20px;
+    color: rgb(75, 150, 194);
+    text-align: center;
+    margin-top: 20px;
 }
-.about-page .left-image img {
-    max-width: 100%;
+
+.about-page .right-content p {
+    text-align: center;
+    
+    font-size: 17px;
+    
+}
+.about-page .left-image  {
+    
+    max-width: 80%;
+    margin: 0 auto;
 }
 .about-page .right-content span {
     display: inline-block;

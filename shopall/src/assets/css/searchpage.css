@@ -5,7 +5,7 @@ Tooplate 2114 Pixie
 https://www.tooplate.com/view/2114-pixie
 
 */
-
+  
 body {
 	font-family: 'Roboto', sans-serif;
 	transition: all 0.5s;
@@ -509,8 +509,14 @@ a {
 	color: #fff;
 }
 
-
-
+.load {
+	width: 90%;
+	box-sizing:border-box;
+}
+.load img{
+    text-align: center;
+	box-sizing:border-box;
+}
 /* Single Product Style */
 /* .single-product .product-slider {
 	padding: 20px;

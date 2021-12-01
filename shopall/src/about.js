@@ -60,9 +60,6 @@ class Navigation extends React.Component {
               <li className="nav-item active">
                <NavLink className="nav-link" to="/about">About Us</NavLink>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="contact.html">Contact Us</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -87,22 +84,17 @@ class Content extends React.Component {
                 </div>
                 <div class="col-md-6">
                     <div class="left-image">
-                    <img src={require("./assets/images/about-us.jpg").default} alt=""></img>
+                    <img src={require("./assets/images/about us.jpg").default} alt=""></img>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="right-content">
-                    <h4>Who we are ? </h4>
+                    <h4>Want to know who we are ? </h4>
                     <p>This is a course project aiming at building our own website. Developers are Mr. Chen YuHeng and Mr. Meng ZiWei from NUS.SoC. </p> 
                     <br></br>
                     <p>This website is built on React.js, Node.js, GraphQL as well as the love and efforts from two developers in both computer science and sneakers.</p>
                     <br></br>
-                    <p><a href="https://www.pexels.com/photo/group-of-people-raising-right-hand-1059120/">Photo Credit</a> goes to Pexels website. </p>
-                    <br></br>
-                    <p><a rel="nofollow" href="https://www.tooplate.com/view/2114-pixie">Pixie HTML Template</a> can be converted into your desired CMS theme. You can use this Bootstrap v4.1.3 layout for any online shop. Please tell your friends about <a rel="nofollow" href="https://www.facebook.com/tooplate/">Tooplate</a>. Thank you.</p>
-                    <div class="share">
-                        <h6>Find us on: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
-                    </div>
+                    
                     </div>
                 </div>
                 </div>

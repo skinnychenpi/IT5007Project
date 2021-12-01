@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './assets/css/flex-slider.css';
 import './assets/css/fontawesome.css';
 import './assets/css/trans.css';
 import reportWebVitals from './reportWebVitals';
 
-// import HomePage from './homepage';
-// import SearchPage from './searchpage';
-// import DetailPage from './detail';
 import App from './App';
 
 
