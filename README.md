@@ -14,3 +14,6 @@ You can verify the server is running by browsing `localhost:5000/graphql`. If th
 Step 4: Under `./shopall` folder, run `npm install` to install all the packages needed for the frontend.
 
 Step 5: Under `./shopall` folder, run `npm start` to start the UI. Now you can verify the website is running by browsing `localhost:3000`.
+
+## Remark:
+If you have any problems in execution, please contact yuhengchen@u.nus.edu immediately.
